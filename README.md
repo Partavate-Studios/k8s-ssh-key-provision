@@ -1,11 +1,19 @@
-## WARNING - You use this at your own peril
+# dssh - Keep your authorized\_keys up to date on a Kubernetes cluster. 
+
+## Purpose
+
+Linode's Kubernetes Engine lacks the ability to provision account SSH keys 
+onto cluster Linode hosts. This automatically provisions keys on the underlying 
+hosts in Kubernetes clusters.
+
+## Ephemerality Warning
 
 Managed Kubernetes providers perform upgrades by deleting and
 recreating your VMs. You must not assume that anything you do
 on these VMs will persist. In fact, the VM could be deleted
 while you are working on it.
 
-## dssh - Keep your authorized\_keys up to date on a Kubernetes cluster.
+Kubernetes hosts are "cattle" not "pets", so anything manually created there will be lost.
 
 ### Deploying Your Public Keys
 
