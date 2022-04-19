@@ -15,6 +15,14 @@ while you are working on it.
 
 Kubernetes hosts are "cattle" not "pets", so anything manually created there will be lost.
 
+## Namespaces
+
+The upstream project ([asauber/dssh](https://github.com/asauber/dssh)) puts this is the `kube-system` 
+namespace. This fork instead uses `infrastructure`, as `kube-system` should not be messed with, 
+much like John McAfee's dogs.
+
+## Usage
+
 ### Deploying Your Public Keys
 
 ```
@@ -42,7 +50,7 @@ kubectl apply -f daemonset.yaml
 
 ### Removing dssh
 ```
-kubectl delete daemonset -n kube-system root-ssh-manager
+kubectl delete daemonset -n infrastructure root-ssh-manager
 ```
 
 ### Notes
