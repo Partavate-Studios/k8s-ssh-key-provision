@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: root-ssh-manager
-  namespace: kube-system
+  namespace: infrastructure
 spec:
   selector:
     matchLabels:
